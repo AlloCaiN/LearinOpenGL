@@ -1,11 +1,17 @@
 package com.allo.learnopengl
 
+import android.opengl.GLSurfaceView
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.allo.learnopengl.gl.GLSurfaceRender
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        val view = GLSurfaceView(this)
+        // 需要配置环境
+        view.setEGLContextClientVersion(3)
+        view.setRenderer(GLSurfaceRender(this))
+        setContentView(view)
     }
 }
