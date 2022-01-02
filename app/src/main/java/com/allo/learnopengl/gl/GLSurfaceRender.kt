@@ -3,6 +3,7 @@ package com.allo.learnopengl.gl
 import android.content.Context
 import android.opengl.GLES30
 import android.opengl.GLSurfaceView
+import android.util.Log
 import com.allo.learnopengl.R
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
@@ -22,6 +23,7 @@ class GLSurfaceRender(val context : Context) : GLSurfaceView.Renderer{
                         .position(0)
 
     override fun onSurfaceCreated(gl: GL10?, config: EGLConfig?) {
+        Log.i("allo","create egl environmet")
         renderProgram = ShaderUtils.loadShaderFromRaw(R.raw.sample_vertex,R.raw.sample_fragment,context.resources)
     }
 
