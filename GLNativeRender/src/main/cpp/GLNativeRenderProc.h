@@ -31,9 +31,11 @@ Java_com_allo_glnativerender_GLNativeRender_onViewportChanged(JNIEnv *env, jobje
 extern "C"
 JNIEXPORT void JNICALL
 Java_com_allo_glnativerender_GLNativeRender_loadGLProgram(JNIEnv *env, jobject thiz,
-                                                          jstring vertex_code, jstring fragment) {
-    loadGLProgram(reinterpret_cast<const char *>(vertex_code),
-                  reinterpret_cast<const char *>(fragment));
+                                                          jstring vertex_code, jstring fragment_code) {
+    const char * vertexCode =  (env)->GetStringUTFChars(vertex_code, NULL);
+    const char * fragmentCode =  (env)->GetStringUTFChars(fragment_code, NULL);
+    loadGLProgram(vertexCode,
+                  fragmentCode);
 }
 extern "C"
 JNIEXPORT void JNICALL

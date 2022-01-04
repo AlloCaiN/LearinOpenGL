@@ -31,7 +31,7 @@ void InitGLProgram() {
 }
 
 void loadGLProgram(const char * vertexCode,const char * fragmentCode) {
-   program = createProgram(gVertexShader,gFragmentShader);
+   program = createProgram(vertexCode,fragmentCode);
 
 }
 
