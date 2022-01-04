@@ -12,21 +12,11 @@ void SetViewPortSize(float width,float height);
 void renderImpl();
 void loadGLProgram(const char * vertexCode,const char * fragmentCode);
 
-extern "C" JNIEXPORT void JNICALL
-Java_com_allo_glnativerender_GLNativeRender_InitOpenGL(JNIEnv *env,jobject type) {
-    InitGLProgram();
-}
 
 extern "C" JNIEXPORT void JNICALL
 Java_com_allo_glnativerender_GLNativeRender_onViewportChanged(JNIEnv *env, jobject type,jfloat width,jfloat height) {
     SetViewPortSize(width,height);
 }
-
-
-
-
-
-#endif //LEARNOPENGL_GLNATIVERENDERPROC_H
 
 extern "C"
 JNIEXPORT void JNICALL
@@ -42,3 +32,4 @@ JNIEXPORT void JNICALL
 Java_com_allo_glnativerender_GLNativeRender_OnDraw(JNIEnv *env, jobject thiz) {
     renderImpl();
 }
+#endif //LEARNOPENGL_GLNATIVERENDERPROC_H

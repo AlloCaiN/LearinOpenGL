@@ -12,9 +12,6 @@ object GLNativeRender {
     init {
         System.loadLibrary("glnativerender")
     }
-    external fun stringFromJNI(): String
-    external fun InitAssetManager(am : AssetManager)
-    external fun InitOpenGL()
     external fun loadGLProgram(vertexCode : String,fragment: String)
     external fun onViewportChanged(width: Float,height : Float)
     external fun OnDraw()
