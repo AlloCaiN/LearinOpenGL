@@ -98,7 +98,7 @@ object ShaderUtils {
         return result
     }
 
-    private fun loadFromRawFile(id : Int,resource: Resources) : String? {
+    fun loadFromRawFile(id : Int,resource: Resources) : String? {
         var result : String? = null
         try {
             val inputStream = resource.openRawResource(id)

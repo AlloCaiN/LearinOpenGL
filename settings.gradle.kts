@@ -8,4 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "LearnOpenGL"
 include(":app")
- 
+include(":GLNativeRender")
