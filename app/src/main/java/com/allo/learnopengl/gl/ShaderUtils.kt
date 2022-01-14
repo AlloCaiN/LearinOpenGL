@@ -118,7 +118,7 @@ object ShaderUtils {
         return result
     }
 
-    private fun checkGLError(op : String) {
+    fun checkGLError(op : String) {
         var error : Int
         while (GLES30.glGetError().also { error = it } != GLES30.GL_NO_ERROR) {
             Log.e(TAG_ERROR,"$op:glError $error")

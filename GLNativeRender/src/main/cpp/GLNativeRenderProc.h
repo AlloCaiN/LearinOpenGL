@@ -7,7 +7,7 @@
 #include "gles.h"
 #include "utils/ShaderUtils.h"
 
-void InitGLProgram();
+
 void SetViewPortSize(float width,float height);
 void renderImpl();
 void loadGLProgram(const char * vertexCode,const char * fragmentCode);
